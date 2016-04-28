@@ -25,3 +25,7 @@ $ DEBUG=jsonApi:handler:find npm test
 ```
 $ DEBUG=jsonApi:handler:* npm test
 ```
+
+### Integration with application logging
+
+If you wish to integrate `jsonapi-server` debug output with your application's logging solution, you can override the functions that are invoked for generating the output of each of the supported namespaces by invoking the package's `debugging.__setLoggers(loggerFactory)` function where the `loggerFactory` parameter is a function that expects a namespace string parameter and returns a logger function for the namespace.
